@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Project Details" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous"></script>
+    <script async src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://polyfill.io/v3/plus_support/safeES5" defer></script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Project Name - Shashwat Patnaik</title>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            },
+            CommonHTML: { scale: 100 },
+            "HTML-CSS": { scale: 100 },
+            SVG: { scale: 100 }
+        });
+    </script>    
+    <style>
+        /* Additional styles specific to project_detail.html */
+        body {
+            background-color: var(--clr-bg);
+            color: var(--clr-fg);
+            font-family: "Poppins", sans-serif;
+            line-height: 1.5;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .index {
+            max-width: 300px; /* Adjusted width */
+            padding: 2em;
+            background-color: var(--clr-bg-alt);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+            flex-shrink: 0; /* Don't allow the index to shrink */
+        }
+
+        .index h2 {
+            font-size: 1.5rem;
+            color: var(--clr-primary);
+            margin-bottom: 1em;
+        }
+
+        .index ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .index li {
+            margin-bottom: 1em;
+        }
+
+        .index a {
+            display: block;
+            color: var(--clr-primary);
+            text-decoration: none;
+        }
+
+        .index a:hover {
+            color: var(--clr-primary);
+            text-decoration: underline;
+        }
+
+        .project-details {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2em;
+            flex-grow: 2; /* Allow the content to grow */
+        }
+
+        .project-details h1 {
+            font-size: 3rem;
+            color: var(--clr-primary);
+            margin-bottom: 0.5em;
+        }
+
+        .project-details h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5em;
+        }
+
+        .project-details p {
+            margin-bottom: 1em;
+        }
+
+        .project-details img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 1em;
+        }
+
+        .code-snippet {
+            background-color: var(--clr-bg-alt);
+            padding: 1em;
+            overflow-x: auto;
+            border-radius: 5px;
+            margin-bottom: 1em;
+        }
+        
+        .index .subheading {
+        margin-left: 1em; /* Adjust the left margin for subheading indentation */
+        color: var(--clr-fg-alt); /* Adjust the color for subheading */
+        }
+
+        .index .subheading a {
+            font-size: 1rem; /* Adjust the font size for subheading */
+        }
+    </style>
+</head>
+<body class="light">
+    <div class="index">
+        <h2>Content</h2>
+        <ul>
+            <li><a href="#project-formulation">Project Formulation</a></li>
+            <li><a href="#project-details">MACH-Aero Framework</a></li>
+            <li><a href="#solver">CFD Solver and Optmizer</a></li>
+            <li class="subheading"><a href="#ADFlow">ADFlow</a></li>
+            <li class="subheading"><a href="#IPOPT">IPOPT</a></li>
+            <li><a href="#constraint">DVGeo Constraints</a></li>
+            <li><a href="#result">Optmized Shape</a></li>
+            <li><a href="#future">Future Work</a></li>
+        </ul>
+    </div>
+
+    <div class="project-details">
+        <h1>Aerodynamic Shape Optimization</h1>
+        
+        <img src="img/ffd.gif" alt="FFD transformation" />
+
+        <h2 id="project-formulation">Problem Formulation</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod vel leo vitae hendrerit.
+            Integer facilisis urna vel quam facilisis, vel fermentum quam tristique.
+        </p>
+        <p>
+            This is an example of an inline equation: \(E=mc^2\).
+        </p>
+        
+        <p>
+            And here is a displayed equation:
+            \[ F(x) = \int_{a}^{b} f(x) \, dx \]
+        </p>
+          
+
+        <h2 id="project-details">MACH-Aero Framework</h2>
+        <p>
+            Proin vel ex nec dui consectetur rhoncus. Nullam in lacus ut erat lacinia consectetur.
+            Vestibulum non facilisis neque, et varius odio. Suspendisse potenti. Curabitur eget est vitae justo luctus tincidunt.
+        </p>
+
+        <img src="img/machaero.png" alt="MACH-Aero Framework" />
+
+        <h2 id="solver">CFD Solver and Optmizer</h2>
+        <p>
+            Proin vel ex nec dui consectetur rhoncus. Nullam in lacus ut erat lacinia consectetur.
+            Vestibulum non facilisis neque, et varius odio. Suspendisse potenti. Curabitur eget est vitae justo luctus tincidunt.
+        </p>
+
+        <h3 id="ADFlow">ADFlow</h3>
+        <p>
+            Proin vel ex nec dui consectetur rhoncus. Nullam in lacus ut erat lacinia consectetur.
+            Vestibulum non facilisis neque, et varius odio. Suspendisse potenti. Curabitur eget est vitae justo luctus tincidunt.
+        </p>
+
+        <h3 id="IPOPT">IPOPT</h3>
+        <p>
+            Proin vel ex nec dui consectetur rhoncus. Nullam in lacus ut erat lacinia consectetur.
+            Vestibulum non facilisis neque, et varius odio. Suspendisse potenti. Curabitur eget est vitae justo luctus tincidunt.
+        </p>
+
+    
+        <!-- Add your code snippet here -->
+        <pre><code class="python">
+            # Create DVGeometry object
+            FFDFile = "ffd_flat.xyz"
+
+            DVGeo = DVGeometry(FFDFile)
+            DVGeo.addLocalDV("shape", lower=-0.1, upper=0.2, axis="y", scale=1.0)
+            </code>
+        </pre>                
+   
+        
+
+        <h2 id="constraint">DVGeo Constraints</h2>
+        <p>
+            Proin vel ex nec dui consectetur rhoncus. Nullam in lacus ut erat lacinia consectetur.
+            Vestibulum non facilisis neque, et varius odio. Suspendisse potenti. Curabitur eget est vitae justo luctus tincidunt.
+        </p>
+
+
+        <h2 id="result">Optmized Shape</h2>
+        <p>
+            Proin vel ex nec dui consectetur rhoncus. Nullam in lacus ut erat lacinia consectetur.
+            Vestibulum non facilisis neque, et varius odio. Suspendisse potenti. Curabitur eget est vitae justo luctus tincidunt.
+        </p>
+
+
+        <h2 id="future">Future Work</h2>
+        <p>
+            Proin vel ex nec dui consectetur rhoncus. Nullam in lacus ut erat lacinia consectetur.
+            Vestibulum non facilisis neque, et varius odio. Suspendisse potenti. Curabitur eget est vitae justo luctus tincidunt.
+        </p>
+
+
+
+        <p>
+            Check out the project on GitHub:
+            <a href="https://github.com" target="_blank">GitHub Repository</a>
+        </p>
+
+        <p>
+            View the live preview:
+            <a href="https://example.com" target="_blank">Live Preview</a>
+        </p>
+    </div>
+</body>
+</html>
