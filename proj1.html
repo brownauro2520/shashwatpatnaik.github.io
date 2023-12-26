@@ -31,26 +31,49 @@
     <style>
         /* Move the common styles for body to the head section */
         body {
-            background-color: var(--clr-bg);
-            color: var(--clr-fg);
-            font-family: "Poppins", sans-serif;
-            line-height: 1.5;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+        background-color: var(--clr-bg);
+        color: var(--clr-fg);
+        font-family: "Poppins", sans-serif;
+        line-height: 1.5;
         }
 
         .index {
-            max-width: 300px;
-            padding: 2em;
-            background-color: var(--clr-bg-alt);
-            box-shadow: var(--shadow);
-            position: sticky;
-            top: 0;
-            height: 100vh;
-            overflow-y: auto;
-            flex-shrink: 0;
+        max-width: 100%;
+        padding: 2em;
+        background-color: var(--clr-bg-alt);
+        box-shadow: var(--shadow);
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        overflow-y: auto;
+        flex-shrink: 0;
+    }
+
+    .project-details {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 2em;
+        flex-grow: 2;
+    }
+
+    @media (max-width: 600px) {
+        .index {
+            max-width: none;
+            width: 100%;
+            padding: 1em;
         }
+
+        .project-details {
+            max-width: none;
+            width: 100%;
+            padding: 1em;
+        }
+    }
+        .project-details img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 1em;
+    }
 
         .index h2 {
             font-size: 1.5rem;
