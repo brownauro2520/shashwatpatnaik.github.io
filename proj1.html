@@ -29,7 +29,7 @@
         });
     </script>    
     <style>
-        /* Additional styles specific to project_detail.html */
+        /* Move the common styles for body to the head section */
         body {
             background-color: var(--clr-bg);
             color: var(--clr-fg);
@@ -41,7 +41,7 @@
         }
 
         .index {
-            max-width: 300px; /* Adjusted width */
+            max-width: 300px;
             padding: 2em;
             background-color: var(--clr-bg-alt);
             box-shadow: var(--shadow);
@@ -49,7 +49,7 @@
             top: 0;
             height: 100vh;
             overflow-y: auto;
-            flex-shrink: 0; /* Don't allow the index to shrink */
+            flex-shrink: 0;
         }
 
         .index h2 {
@@ -83,7 +83,7 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 2em;
-            flex-grow: 2; /* Allow the content to grow */
+            flex-grow: 2;
         }
 
         .project-details h1 {
@@ -114,14 +114,14 @@
             border-radius: 5px;
             margin-bottom: 1em;
         }
-        
+
         .index .subheading {
-        margin-left: 1em; /* Adjust the left margin for subheading indentation */
-        color: var(--clr-fg-alt); /* Adjust the color for subheading */
+            margin-left: 1em;
+            color: var(--clr-fg-alt);
         }
 
         .index .subheading a {
-            font-size: 1rem; /* Adjust the font size for subheading */
+            font-size: 1rem;
         }
     </style>
 </head>
