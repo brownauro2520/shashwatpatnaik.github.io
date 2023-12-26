@@ -35,9 +35,9 @@
             color: var(--clr-fg);
             font-family: "Poppins", sans-serif;
             line-height: 1.5;
-            display: flex;
+            /*display: flex;
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: space-between;*/
             margin: 0; /* Remove default margin */
             overflow-x: hidden; /* Hide horizontal scrollbar */
         }
@@ -52,8 +52,12 @@
             height: 100vh;
             overflow-y: auto;
             flex-shrink: 0; /* Don't allow the index to shrink */
+            transition: transform 0.3s ease;
         }
-    
+        .index-hidden {
+            transform: translateX(-100%); /* Move the index off-screen */
+        }
+
         .index h2 {
             font-size: 1.5rem;
             color: var(--clr-primary);
@@ -87,6 +91,7 @@
             padding: 2em;
             flex-grow: 2; /* Allow the content to grow */
         }
+        
     
         .project-details h1 {
             font-size: 3rem;
@@ -125,10 +130,50 @@
         .index .subheading a {
             font-size: 1rem; /* Adjust the font size for subheading */
         }
+        #revealIndexButton {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: var(--clr-bg-alt);
+            color: var(--clr-primary);
+            padding: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            font-family: "Poppins", sans-serif;
+        }
     </style>
-    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const index = document.querySelector('.index');
+            const revealIndexButton = document.getElementById('revealIndexButton');
+
+            function hideIndex() {
+                index.classList.add('index-hidden');
+            }
+
+            // Auto-hide the index after 3 seconds
+            setTimeout(hideIndex, 3000);
+
+            // Add a click event listener to the .index container
+            index.addEventListener('click', function (event) {
+                // Prevent the click event from reaching the body and triggering its listener
+                event.stopPropagation();
+            });
+
+            // Add a click event listener to the reveal index button
+            revealIndexButton.addEventListener('click', function () {
+                index.classList.remove('index-hidden');
+                // Reset the auto-hide timer
+                setTimeout(hideIndex, 3000);
+            });
+        });
+    </script>
+        
 </head>
 <body class="light">
+    <button id="revealIndexButton">SP</button>
     <div class="index">
         <h2>Content</h2>
         <ul>
