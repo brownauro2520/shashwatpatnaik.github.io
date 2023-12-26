@@ -29,107 +29,86 @@
         });
     </script>    
     <style>
-        /* Move the common styles for body to the head section */
+        /* Additional styles specific to project_detail.html */
         body {
-        background-color: var(--clr-bg);
-        color: var(--clr-fg);
-        font-family: "Poppins", sans-serif;
-        line-height: 1.5;
+            background-color: var(--clr-bg);
+            color: var(--clr-fg);
+            font-family: "Poppins", sans-serif;
+            line-height: 1.5;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 0; /* Remove default margin */
+            overflow-x: hidden; /* Hide horizontal scrollbar */
         }
-
+    
         .index {
-        max-width: 100%;
-        padding: 2em;
-        background-color: var(--clr-bg-alt);
-        box-shadow: var(--shadow);
-        position: sticky;
-        top: 0;
-        height: 100vh;
-        overflow-y: auto;
-        flex-shrink: 0;
-    }
-
-    .project-details {
-        max-width: 100%;
-        margin: 0 auto;
-        padding: 2em;
-        flex-grow: 2;
-    }
-
-    @media (max-width: 600px) {
-        .index {
-            max-width: none;
-            width: 100%;
-            padding: 1em;
+            max-width: 300px; /* Adjusted width */
+            padding: 2em;
+            background-color: var(--clr-bg-alt);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+            flex-shrink: 0; /* Don't allow the index to shrink */
         }
-
-        .project-details {
-            max-width: none;
-            width: 100%;
-            padding: 1em;
-        }
-    }
-        .project-details img {
-        max-width: 100%;
-        height: auto;
-        margin-bottom: 1em;
-    }
-
+    
         .index h2 {
             font-size: 1.5rem;
             color: var(--clr-primary);
             margin-bottom: 1em;
         }
-
+    
         .index ul {
             list-style: none;
             padding: 0;
             margin: 0;
         }
-
+    
         .index li {
             margin-bottom: 1em;
         }
-
+    
         .index a {
             display: block;
             color: var(--clr-primary);
             text-decoration: none;
         }
-
+    
         .index a:hover {
             color: var(--clr-primary);
             text-decoration: underline;
         }
-
+    
         .project-details {
             max-width: 800px;
             margin: 0 auto;
             padding: 2em;
-            flex-grow: 2;
+            flex-grow: 2; /* Allow the content to grow */
         }
-
+    
         .project-details h1 {
             font-size: 3rem;
             color: var(--clr-primary);
             margin-bottom: 0.5em;
         }
-
+    
         .project-details h2 {
             font-size: 2rem;
             margin-bottom: 0.5em;
         }
-
+    
         .project-details p {
             margin-bottom: 1em;
         }
-
+    
         .project-details img {
             max-width: 100%;
             height: auto;
             margin-bottom: 1em;
         }
-
+    
         .code-snippet {
             background-color: var(--clr-bg-alt);
             padding: 1em;
@@ -137,16 +116,17 @@
             border-radius: 5px;
             margin-bottom: 1em;
         }
-
+    
         .index .subheading {
-            margin-left: 1em;
-            color: var(--clr-fg-alt);
+            margin-left: 1em; /* Adjust the left margin for subheading indentation */
+            color: var(--clr-fg-alt); /* Adjust the color for subheading */
         }
-
+    
         .index .subheading a {
-            font-size: 1rem;
+            font-size: 1rem; /* Adjust the font size for subheading */
         }
     </style>
+    
 </head>
 <body class="light">
     <div class="index">
