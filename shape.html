@@ -35,7 +35,7 @@
     <script type="text/javascript" async
         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
     </script>
-    <title>Project 1</title>
+    <title>Shashwat Patnaik</title>
   </head>
   <body class="light" id="top">
     <header class="header center">
@@ -88,7 +88,7 @@
             </p>
 
             
-            <div class="projects__stacked">
+            <div class="projects__grid">
                 <div class="projectl">
                     <h2 id="Nomenclature" class="section__title">Nomenclature</h2>
                     <table class="center-table">
@@ -260,7 +260,7 @@
                         Thickness constraints create a matrix of points along chord and span-wise direction, where the thickness is computed, the user can set a lower and upper bound on individual points. By default, thickness constraints act as scaled constraints where the initial value will be represented as 1. However, if scaled=False, then the user can provide physical length as an upper and lower bound.
                     </p>    
 
-                    <img src="img/thick.png" alt="thick con" style="max-width: 500px;" class="project__image">
+                    <img src="img/thick.png" alt="thick con" style="max-width: 60%" class="project__image">
                     
 
                     <p class="project__description">
@@ -307,7 +307,7 @@
                         control points in between the two edges as shown in Figure
                     </p>
 
-                    <img src="img/linear.png" alt="linear" style="max-width: 500px;" class="project__image"/>
+                    <img src="img/linear.png" alt="linear" style="max-width: 60%" class="project__image"/>
 
                     <p class="project__description">To make sure the shape of the fuselage remains the same, linear constraints are introduced to
                         ensure that the shape deformations on one side of the airfoil mirror that of the other. The global
@@ -341,7 +341,7 @@
                         of 0.2. The payload is positioned along the x-axis in the range [0.2, 0.4], and it is symmetric to the x-axis.
                     </p>  
                     
-                    <img src="img/pill.png" alt="pill" style="max-width: 500px;" class="project__image"/>
+                    <img src="img/pill.png" alt="pill" style="max-width: 60%" class="project__image"/>
 
 
                     <ul class="step-list">
@@ -353,11 +353,11 @@
 
                     <p class="project__description">The following the convergence history of optimization (note: gray lines are Cl bounds):</p>
 
-                    <img src="img/conv.png" alt="conv" class="project__image" style="max-width: 600px;"/>
+                    <img src="img/conv.png" alt="conv" class="project__image" style="max-width: 70%"/>
 
                     <p class="project__description">The following are the converged shape of the fuselage after 123 iterations:</p>
-                    <img src="img/shape.png" alt="1s"  class="project__image" style="max-width: 600px;"/>
-                    <img src="img/shape3.png" alt="3s" class="project__image"style="max-width: 600px;"/>
+                    <img src="img/shape.png" alt="1s"  class="project__image" style="max-width: 80%"/>
+                    <img src="img/shape3.png" alt="3s" class="project__image"style="max-width: 80%"/>
 
                     <p class="project__description">The shape is in line with what was expected, the nose is round which becomes clear looking at
                         the zoomed-in view in Figure above. The payload is sufficiently embedded inside the shape and the
@@ -368,7 +368,7 @@
                         have happened due to surface constraint as it is exactly 1 at the end of convergence which was
                         the limit.</p>
 
-                    <img src="img/c17.png" alt="c17" class="project__image" style="max-width: 800px;"/>
+                    <img src="img/c17.png" alt="c17" class="project__image" style="max-width: 80%"/>
 
                     <p class="project__description"> Ideally it is better to have a slender fuselage with a large length, however, due to payload
                         constraint and length constraints, the optimized aircraft is stout. In the real world, C-17 has
@@ -382,8 +382,8 @@
                     <h2 id="investigation"  class="section__title">Investigation of Optimum</h2>                
 
                     <p class="project__description">The optmizer was run with three different intial strating point as mention earlier. Following the starting geometry ellipse and NACA shape:</p>    
-                    <img src="img/ellipse.png" alt="ellipse" class="project__image" style="max-width: 300px;"/>
-                    <img src="img/naca.png" alt="naca" class="project__image" style="max-width: 300px;"/>
+                    <img src="img/ellipse.png" alt="ellipse" class="project__image" style="max-width: 40%"/>
+                    <img src="img/naca.png" alt="naca" class="project__image" style="max-width: 40%"/>
 
                     <p class="project__description">The converged values of \(C_L \) and \(C_D \) for different shapes:</p>
 
@@ -421,7 +421,7 @@
                         optima, however, so has the trailing edge. This was not expected but it is reassuring to see that
                         the overall shape appears to be identical in conjunction with the values in Table above</p>
             
-                        <img src="img/comp.png" alt="comp" class="project__image" style="max-width: 800px;"/> 
+                        <img src="img/comp.png" alt="comp" class="project__image" style="max-width: 90%"/> 
 
                 </div>     
 
