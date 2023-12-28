@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Portfolio" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+
+    <!-- codeeeeee -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css" integrity="sha384-rCCjoCPCsizaAAYVoz1Q0CmCTvnctK0JkfCSjx7IIxexTBg+uCKtFYycedUjMyA2" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js" integrity="sha384-y3S3DxSclQdjA6KR1A5eS0TP3EGdyKwDdKKIGKj2uma3e8sfN0DasF2tR74h6Y3D" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-python.min.js" integrity="sha384-1MA2LqZg+uEwVle+HmXe1ybNgSxmhGEhvHG0Qyyv0M+ODXigSd2CLnEqQ6jyMmpw" crossorigin="anonymous"></script> -->
+    <!-- Include Highlight.js stylesheet -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+
+  <!-- Include Highlight.js library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+
+  <!-- Initialize Highlight.js -->
+  <script>hljs.initHighlightingOnLoad();</script>    
+    <!-- codeeeeee -->
+
+
+    <script
+      src="https://kit.fontawesome.com/fa62c117c7.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <title>Shashwat Patnaik</title>
+  </head>
+  <body class="light" id="top">
+    <header class="header center">
+      <h3>
+        <a href="https://brownauro2520.github.io/shashwatpatnaik.github.io/index.html" class="link"
+          >SP.</a
+        >
+      </h3>
+
+      <nav class="nav center">
+        <ul class="nav__list center">
+          <li class="nav__list-item">
+            <a class="link link--nav" href="index.html#projects">Projects</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="index.html#skills">Skills</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="index.html#contact">Contact</a>
+          </li>
+        </ul>
+
+        <button type="button" aria-label="toggle theme" class="btn btn--icon">
+          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
+
+        <button
+          type="button"
+          aria-label="toggle navigation"
+          class="btn btn--icon nav__hamburger"
+        >
+          <i aria-hidden="true" class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+        <!-- About -->
+        <div class="about center">
+          <h1><span class="about__name">Aerodynamic Shape Optimization</span></h1>    
+        </div>    
+        
+        <!-- Add the following image tag -->
+        <img src="img/ffd.gif" alt="random" class="project__image">
+
+
+        <section id="projects" class="section projects">
+            <p class="project__description">
+                UAV companies must design fuselage shapes that are able to enclose odd shapes, be lightweight, and remain within regulations all while minimizing drag. The goal of this project is to propose a framework, methodology, and execution for aerodynamic shape optimization of small unmanned aerial vehicles.
+            </p>
+
+            
+            <div class="projects__stacked">
+                <div class="projectl">
+                    <h2 id="Nomenclature" class="section__title">Nomenclature</h2>
+                    <table class="center-table">
+                        <tr><th>Symbol</th><th>Name</th></tr>
+                        <tr><td>x</td><td>Shape Variable</td></tr>
+                        <tr><td>alt</td><td>Altitude</td></tr>
+                        <tr><td>SA</td><td>Surface Area</td></tr>
+                        <tr><td>V</td><td>Volume</td></tr>
+                        <tr><td>AoA</td><td>Angle of Attack</td></tr>
+                        <tr><td>\(t_i\)</td><td>Thickness of Fuselage without Payload</td></tr>
+                        <tr><td>\(t_j\)</td><td>Thickness of Fuselage with Payload</td></tr>
+                        <tr><td>p</td><td>Height of the Payload (scaled)</td></tr>
+                    </table>
+                </div>
+
+
+
+
+
+
+                <div class="projectl">
+                    <h2 id="project-formulation" class="section__title">Problem Formulation</h2>
+                    <p class="project__description">
+                        A 2-dimensional geometry of an aircraft fuselage is supplied along with a set of constraints which could include: lift, surface area, angle of attack, thickness, volume, flatness and leading-edge or trailing-edge position. The objective is to minimize the drag of the fuselage while varying the shape of the geometry
+                    </p>
+                    <p> \[\text{Minimize} \, \hspace{2em} C_D = f(x, C_L, alt, AoA, M) \]</p> 
+                    <p> \[\text{with respect to} \, \hspace{4.4em} -0.1 \leq x \leq 0.2 \]</p>
+
+                    <p>\[\text{Subject to} \,\hspace{10em}\]</p>
+                    
+                    <ul>
+                        <li>\[ \hspace{12em}\ 0.14 \leq C_L \leq 0.2 \]</li>
+                        <li>\[ \hspace{12em}\ SA \leq SA_0 \]</li>
+                        <li>\[ \hspace{12em}\ 0.1t_{i,0} \leq t_i \leq 3t_{i,0} \]</li>
+                        <li>\[ \hspace{12em}\ pt_{j,0} \leq t_j \leq 3t_{j,0} \]</li>
+                    </ul>    
+                </div>  
+
+
+
+
+
+
+
+
+
+
+
+                <div class="projectl">
+                    <h2 id="project-details" class="section__title">MACH-Aero Framework</h2>
+                    <p class="project__description">
+                        There are six major modules used in MACH-Aero: Pre-processing, geometry parameterization, volume mesh deformation, flow simulation, adjoint computation and optimization.
+                    </p>
+                    <!-- Add the following image tag -->
+                    <img src="img/machaero.png" alt="MACH-Aero Framework" class="project__image">
+                    
+                    <section>
+                        <strong class="section-head">1. Generate Volume Mesh and FFD Points (Pre-processing):</strong>
+                        <ul class="step-list">
+                          <li>Utilize mesh generation tools like <strong>pyHyp</strong> or ICEM to create a volume mesh for the baseline geometry.</li>
+                          <li>Generate <strong>Free-Form Deformation (FFD)</strong> points that will be used for morphing the design surface.</li>
+                        </ul>
+                      </section>
+                    
+                      <section>
+                        <strong class="section-head">2. Optimization Setup:</strong>
+                        <ul class="step-list">
+                          <li>Provide a set of baseline design variables to the optimizer.</li>
+                          <li>Use <strong>IPOPT</strong> with the SQP algorithm for optimization, facilitated by <strong>pyOptSparse</strong>.</li>
+                        </ul>
+                      </section>
+                    
+                      <section>
+                        <strong class="section-head">3. Geometry Parameterization <strong>(pyGeo)</strong> and Deformation:</strong>
+                        <ul class="step-list">
+                          <li>Receive updated design variables from the optimizer.</li>
+                          <li>Use FFD points and perform deformation on the design surface.</li>
+                          <li>Output the deformed design surface to the mesh deformation module <strong>(IDWarp)</strong>.</li>
+                          <li>Compute values of geometric constraints and their derivatives with respect to design variables.</li>
+                        </ul>
+                      </section>
+                    
+                      <section>
+                        <strong class="section-head">4. Mesh Deformation (IDWarp):</strong>
+                        <ul class="step-list">
+                          <li>Deform the volume mesh based on the updated design surface from pyGeo.</li>
+                          <li>Output the updated volume mesh for the next step.</li>
+                        </ul>
+                      </section>
+                    
+                      <section>
+                        <strong class="section-head">5. Flow Simulation:</strong>
+                        <ul class="step-list">
+                          <li>Receive the updated volume mesh.</li>
+                          <li>Utilize high-fidelity CFD tools <strong>(e.g., ADflow or DAFoam)</strong> to compute state variables or physical fields (pressure,
+                            density, velocity, etc.).</li>
+                          <li>Compute objective and constraint functions (e.g., drag and lift).</li>
+                        </ul>
+                      </section>
+                    
+                      <section>
+                        <strong class="section-head">6. Adjoint Computation:</strong>
+                        <ul class="step-list">
+                          <li>Compute total derivatives of objective and constraint functions with respect to design variables.</li>
+                          <li>Provide derivatives back to the optimizer.</li>
+                          <li>Use adjoint solvers such as ADflow or DAFoam.</li>
+                        </ul>
+                      </section>
+                    
+                      <section>
+                        <strong class="section-head">7. Optimization Update:</strong>
+                        <ul class="step-list">
+                          <li>Receive values and derivatives of objective and constraint functions from the adjoint computation module.</li>
+                          <li>Perform SQP computation.</li>
+                          <li>Output a set of updated design variables to pyGeo for the next iteration.</li>
+                        </ul>
+                      </section>
+                </div>  
+                
+
+                <div class="projectl">
+                    <h2 id="solver"  class="section__title">CFD Solver and Optmizer</h2>
+                    <p class="project__description">
+                        The following packages are used ADFlow, IPOPT, pyOptSparse, pyGeo, pyHyp, IDWarp and GMRES solver from PETSc.
+                    </p>
+
+                    <h3 id="ADFlow">ADFlow</h3>
+                    <p class="project__description">
+                        The Mach-Aero framework provides support for ADflow and DAfoam. ADflow was chosen as it is a robust solver and has a discrete adjoint method that efficiently computes the derivatives of objective and constraint functions with respect to large numbers of design variables. It has been coupled with an approximate Newton-Krylov (AKN) and Newton-Krylov (NK) solver for efficient and accurate convergence. There are two main steps when using this method. In the first step, we use the ANK solver to significantly decrease the total residual norm by five orders of magnitude compared to the initial iteration, which starts with free-stream conditions. Once this initial reduction is achieved, we switch to the NK solver for the final step of convergence
+                    </p>
+
+                    <h3 id="derivative">Derivative Computation</h3>
+                    <p class="project__description">
+                        As the aerodynamic shape optimization has a considerably large number of design variables, the choice of derivative computation should not scale with respect to the number of design variables. Thus, the adjoint method is used to compute the total derivatives as it is independent of the number of variables. Adjoints are computed through ADflow using a discrete adjoint method, then the preconditioned GMRES solver from PETSc is used for solving the adjoint equations.
+                    </p> 
+                           
+                    <h3 id="IPOPT">IPOPT</h3>
+                    <p class="project__description">
+                        The optimization algorithm used is called IPOPT which works great for large-scale nonlinear optimization. The optimizer makes use of an interior point line search filter and adaptive barrier update strategies. This algorithm has a vast array of settings that can be modified, the most important ones are highlighted in the listing below:
+                    </p>   
+                    
+                    <!-- Add your code snippet here -->
+                    <pre><code class="python">
+                        optOptions = {
+                            "max_iter": 10000,
+                            "tol": 1.0e-6,
+                            "limited_memory_max_history": 1000,
+                            "hessian_approximation": "limited-memory",
+                            "start_with_resto": "yes",
+                            "output_file": os.path.join(args.output, "IPOPT_print.out"),
+                        }
+                    </code></pre>
+                    
+                    <p class="project__description">
+                        The limited-memory setting of the Hessian approximation is used to reset this sparse matrix at times which greatly speeds up the computation time. The tolerance is set to 1.0e-6 which is set to terminate when the scaled Non-Linear Program (NLP) error becomes smaller than that value. The objective function of this problem is scaled to a factor of 1.0e4 which is again done to make it more “well-behaved.
+                    </p>
+                </div>  
+                
+                <div class="projectl">
+                    <h2 id="constraint"  class="section__title">DVGeo Constraints</h2>
+
+                    <p class="project__description">
+                        <strong>pyGeo</strong> is a package for generating and manipulating geometry, particularly for applications involving shape optimization.
+                        DVGeometry (short for “Design Variable Geometry”) parameterizes and modifies geometry (pointsets) in shape optimization problems, using the free-form deformation (FFD) method
+                    </p>
+
+                    <h3 id="thickness" class="section-head">Thickness Constraint </h3>
+                    <p class="project__description">
+                        Thickness constraints create a matrix of points along chord and span-wise direction, where the thickness is computed, the user can set a lower and upper bound on individual points. By default, thickness constraints act as scaled constraints where the initial value will be represented as 1. However, if scaled=False, then the user can provide physical length as an upper and lower bound.
+                    </p>    
+
+                    <img src="img/thick.png" alt="thick con" style="max-width: 500px;" class="project__image">
+                    
+
+                    <p class="project__description">
+                        For a 2D fuselage, the payload location is fixed in the aircraft, thus through thickness constraint We can represent the geometry of the payload in the fuselage by increasing the lower limit of thickness to the size of the fuselage, so it encapsulates the payload. The figure above represents the bounds the fuselage can move:
+                    </p>
+        
+                    <!-- Add your code snippet here -->
+                    <pre><code class="python">
+                        npl =100 #points along chord wise diretion
+                        plthick = np.ones((2,100))*0.1 
+                        plthick[:,19:40] = 2.7027027 #minimum height where payload is
+                        puthick = np.ones((2,100))*4
+                        DVCon.addThicknessConstraints2D(leList, teList, 2, npl, lower=plthick, upper=puthick, scaled=True)
+                        </code>
+                    </pre>    
+
+                    <h3 id="mass" class="section-head">Surface Area (Mass) Constraint</h3>
+                    <p class="project__description"> The fuselage is represented as a 2-Dimensional shape and hence a method of quantifying the
+                        mass of the optimized shape is necessary. One way of doing this is to use the surface area as a
+                        constraint and with regards to the geometry it is the circumference of the shape as the depth is
+                        unity in z-direction. Using data from MatWEB, a material science property data sheet, carbon
+                        fiber infused with epoxy resin has a density of about 1500 kg/m³ and assuming a typical layer
+                        thickness of 1mm means that a square meter of carbon fiber laminate equates to about 1.5kg.
+                        Hence one is able to initialize the circumference of the starting shape to a known value, for
+                        example 2 meters and by virtue of the 2D simulation would also equate to a surface area of 2
+                        meters squared; also known as 3kg. Therefore in the setup of the optimization problem, a upper
+                        and lower bound can be specified; see the Listing below:</p>
+
+                        <!-- Add your code snippet here -->
+                    <pre><code class="python">
+                        # Only ADflow has the getTriangulatedSurface Function
+                        # Obtain the surface area from ADFlow
+                        DVCon.setSurface(CFDSolver.getTriangulatedMeshSurface()) 
+                        # constrain the max and minmum weight or surface area
+                        DVCon.addSurfaceAreaConstraint(lower = 0.3, upper = 1.5)
+                        </code>
+                    </pre>  
+
+                    <h3 id="linear" class="section-head">Linear Constraint</h3>
+                    <p class="project__description">
+                        The FFD box representing the control points has to be 3-D shape, however our fuselage is
+                        represented in 2-D. Thus, to overcome it we mirror the shape on the other side with a chord
+                        length of 1. Note, as this becomes a 3-D problem the control point will double, but there are no
+                        control points in between the two edges as shown in Figure
+                    </p>
+
+                    <img src="img/linear.png" alt="linear" style="max-width: 500px;" class="project__image"/>
+
+                    <p class="project__description">To make sure the shape of the fuselage remains the same, linear constraints are introduced to
+                        ensure that the shape deformations on one side of the airfoil mirror that of the other. The global
+                        index of the control point on one side is the input parameter as a vector and the other side as the
+                        other input. Then factorA is set to 1 and factorB is set to -1, so it mirrors the exact deviation of
+                        the control point on both sides</p>
+
+                    <p> \[ factorA.dvA - factorB.dvB = 0 \]</p> 
+
+                    <!-- Add your code snippet here -->
+                    <pre><code class="python">
+                        lIndex = DVGeo.getLocalIndex(0) #obtain the global index of control point
+                        indSetA = [] 
+                        indSetB = []
+                        for i in range(lIndex.shape[0]):
+                            indSetA.append(lIndex[i, 0, 0])
+                            indSetB.append(lIndex[i, 0, 1])
+                        for i in range(lIndex.shape[0]):
+                            indSetA.append(lIndex[i, 1, 0])
+                            indSetB.append(lIndex[i, 1, 1])
+                        DVCon.addLinearConstraintsShape(indSetA, indSetB, factorA=1.0, factorB=-1.0, lower=0, upper=0)
+                        </code>
+                    </pre>
+                </div> 
+
+
+                <div class="projectl">
+                    <h2 id="result"  class="section__title">Optmized Shape</h2>    
+                    <p class="project__description">
+                        The optimization framework is applied to the 'pill' shape initially, featuring a square payload with a size
+                        of 0.2. The payload is positioned along the x-axis in the range [0.2, 0.4], and it is symmetric to the x-axis.
+                    </p>  
+                    
+                    <img src="img/pill.png" alt="pill" style="max-width: 500px;" class="project__image"/>
+
+
+                    <ul class="step-list">
+                        <li>Deviation of control point - [-0.1, 0.2]</li>
+                        <li>Coefficient of Lift - [0.1, 0.2]</li>
+                        <li>Surface Area - [0.3, 1] (all the shape is initialized to have the maximum surface area or weight)</li>
+                        <li>Thickness Constraint - t(19, 40) = [1, 3] (there were 100 points in the chord direction)</li>
+                    </ul>
+
+                    <p class="project__description">The following the convergence history of optimization (note: gray lines are Cl bounds):</p>
+
+                    <img src="img/conv.png" alt="conv" class="project__image" style="max-width: 600px;"/>
+
+                    <p class="project__description">The following are the converged shape of the fuselage after 123 iterations:</p>
+                    <img src="img/shape.png" alt="1s"  class="project__image" style="max-width: 600px;"/>
+                    <img src="img/shape3.png" alt="3s" class="project__image"style="max-width: 600px;"/>
+
+                    <p class="project__description">The shape is in line with what was expected, the nose is round which becomes clear looking at
+                        the zoomed-in view in Figure above. The payload is sufficiently embedded inside the shape and the
+                        trailing edge contracts to a point that suggests that the drag has been minimized. There is also a
+                        prescribed lift coefficient which is always desirable for a fuselage and in this instance, it has 
+                        achieved a good balance between the two considering the thickness of the shape. We expected
+                        the tail end to be much higher and the nose section to get wider later on. However, this might
+                        have happened due to surface constraint as it is exactly 1 at the end of convergence which was
+                        the limit.</p>
+
+                    <img src="img/c17.png" alt="c17" class="project__image" style="max-width: 800px;"/>
+
+                    <p class="project__description"> Ideally it is better to have a slender fuselage with a large length, however, due to payload
+                        constraint and length constraints, the optimized aircraft is stout. In the real world, C-17 has
+                        similar requirements of a shorter length but is still able to carry a large payload. As shown in
+                        Figure above, the fuselage is quite similar to C-17's fuselage. As mentioned earlier the tail section
+                        being lower could be because of surface constraint. Hence, it can be assumed that the optimizer
+                        worked as intended.</p>
+                </div> 
+
+                <div class="projectl">
+                    <h2 id="investigation"  class="section__title">Investigation of Optimum</h2>                
+
+                    <p class="project__description">The optmizer was run with three different intial strating point as mention earlier. Following the starting geometry ellipse and NACA shape:</p>    
+                    <img src="img/ellipse.png" alt="ellipse" class="project__image" style="max-width: 300px;"/>
+                    <img src="img/naca.png" alt="naca" class="project__image" style="max-width: 300px;"/>
+
+                    <p class="project__description">The converged values of \(C_L \) and \(C_D \) for different shapes:</p>
+
+
+                    <table class="center-table">
+                        <thead>
+                            <tr>
+                                <th>Initial Geometry</th>
+                                <th>Pill</th>
+                                <th>Ellipse</th>
+                                <th>NACA</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>\(C_L \)</td>
+                                <td>0.140005</td>
+                                <td>0.140009</td>
+                                <td>0.140006</td>
+                            </tr>
+                            <tr>
+                                <td>\(C_D \)</td>
+                                <td>0.0399129</td>
+                                <td>0.0399131</td>
+                                <td>0.0399132</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                    <p class="project__description">
+                        Visualizing all three converged fuselage shapes in the same plot and ensure that they 
+                        are in correlation with each other. Looking at the figure below for this comparison, what is
+                        interesting is that it appears as if the leading edge has shifted slightly between the converged
+                        optima, however, so has the trailing edge. This was not expected but it is reassuring to see that
+                        the overall shape appears to be identical in conjunction with the values in Table above</p>
+            
+                        <img src="img/comp.png" alt="comp" class="project__image" style="max-width: 800px;"/> 
+
+                </div>     
+
+
+
+                <div class="projectl">
+                    <h2 id="future"  class="section__title">Future Work</h2>                
+                
+                    <p class="project__description"> Implement the same framework for 3-D geometry. </p>
+                
+                    <p class="project__description">
+                        Check out the project on GitHub:
+                        <a href="https://github.com" target="_blank">GitHub Repository</a>
+                    </p>
+            
+                    <p class="project__description">
+                        View the live preview:
+                        <a href="https://example.com" target="_blank">Live Preview</a>
+                    </p>
+                </div> 
+                
+                
+    </main>    
+
+    <footer class="footer">
+        <a
+          href="https://github.com/brownauro2520"
+          class="link footer__link"
+        >
+          Created By Shashwat Patnaik
+        </a>
+      </footer>
+  
+      <div class="scroll-container">
+      <div class="scroll-top">
+        <a aria-label="Scroll up" href="#top">
+          <i aria-hidden="true" class="fas fa-arrow-up"></i>
+        </a>
+      </div>
+      </div>     
+      <script src="./script.js"></script>
+    </body>
+  </html>
