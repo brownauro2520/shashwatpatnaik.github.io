@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Portfolio" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+
+  <!-- Include Highlight.js library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+
+  <!-- Initialize Highlight.js -->
+  <script>hljs.initHighlightingOnLoad();</script>    
+    <!-- codeeeeee -->
+
+
+    <script
+      src="https://kit.fontawesome.com/fa62c117c7.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <title>Shashwat Patnaik</title>
+  </head>
+  <body class="light" id="top">
+    <header class="header center">
+      <h3>
+        <a href="https://brownauro2520.github.io/shashwatpatnaik.github.io/index.html" class="link"
+          >SP.</a
+        >
+      </h3>
+
+      <nav class="nav center">
+        <ul class="nav__list center">
+          <li class="nav__list-item">
+            <a class="link link--nav" href="index.html#projects">Projects</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="index.html#skills">Skills</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="index.html#contact">Contact</a>
+          </li>
+        </ul>
+
+        <button type="button" aria-label="toggle theme" class="btn btn--icon">
+          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
+
+        <button
+          type="button"
+          aria-label="toggle navigation"
+          class="btn btn--icon nav__hamburger"
+        >
+          <i aria-hidden="true" class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+        <!-- About -->
+        <div class="about center">
+          <h1><span class="about__name">Mesh Adaptation (Adjoint Error Indicators)</span></h1>    
+        </div>    
+        
+        
+
+
+        <section id="projects" class="section projects">
+            <p class="project__description">
+                Adjoint-based mesh adaptation strategy for mesh refinement of compressible flow over the multi-element airfoil using SSP-RK2 with local time stepping using Finite Volume Method developed from sctrach.
+            </p>
+
+            <!-- Add the following image tag -->
+            <img src="img/mesh.png" alt="mesh adaptation" class="project__image">
+            
+            <div class="projects__grid">
+                <div class="projectl">
+                    <h2 id="mesh" class="section__title">Mesh Generation</h2>
+                    <p class="project__description">
+                        The objective of this project is to generate an unstructured triangular mesh for a three-element airfoil. The geometry of the airfoil can be seen in Figure. The origin of the coordinate system will be set at the leading edge of the main element, which has a unit chord, c = 1. The fairfield boundary is a square where (x,y) ∈ [-100,100]². The coarse mesh will consist of around 1500 cells, where there are smaller cells close to the airfoil and larger cells in the fairfield. Uniform refinement will be used to generate meshes with 8k, 32k, and 128k elements. Local refinement will be implemented to improve the resolution in important regions like the leading and trailing edges of the airfoil. Finally, verification will be conducted on all meshes to ensure validity and the meshes will be printed to a .gri file format.                    
+                    </p>
+                    <img src="img/mesh_custom.png" alt="mesh" style="max-width: 50%" class="project__image">
+                    <!-- Link to the PDF file -->
+                    <p class="project__description">
+                        <a href="pdf/cfd_proj1.pdf" target="_blank" style="color: purple; text-decoration: underline;">View the Project PDF</a>
+                    </p>
+                </div>
+
+                <div class="projectl">
+                    <h2 id="mesh" class="section__title">Discontinuous Galerkin</h2>
+                    <p class="project__description">
+                        In this project, the Discontinuous Galerkin Method was used along with the implementation of curved meshes, to resolve the flow around an airfoil and a Gaussian bump. The solver had the implementation for p = 0, 1, 2, 3, in order to fulfill the convergence study. It was observed that the rate of convergences is proportional to the order of spatial approximation (p). Further, the capability for mesh adaptation was introduced, and the results after several iterations were compared with data obtained from higher order p and finer mesh.              
+                    </p>
+                    <img src="img/dg.png" alt="mesh" style="max-width: 70%" class="project__image">
+                    <!-- Link to the PDF file -->
+                    <p class="project__description">
+                        <a href="pdf/cfd_proj2.pdf" target="_blank" style="color: purple; text-decoration: underline;">View the Project PDF</a>
+                    </p>
+                </div>
+
+                <div class="projectl">
+                    <h2 id="mesh" class="section__title">Adjoint Based Mesh Adaptation</h2>
+                    <p class="project__description">
+                        First-order methods such as FVM are heavily dependent on the quality of the underlying computational mesh. Adjoint-based mesh adaptation is a powerful technique for improving the accuracy and efficiency of numerical simulations. By transferring solution states between coarse and fine spaces, problematic regions within the domain are identified. Deciding which cells are to be refined depends on the targeting strategy. The lift, drag, moment and entropy adjoints were used to adapt the mesh and the targeting strategy chosen was to refine 25% of the total error. The rate of convergence varies based on which adjoint is used to drive refinement as well as the specific targeting strategy. If finely tuned, using a statistical quantity such as the mean to target cells would be the most effective. The quality of the solution has improved compared to primitive adaptation methods and uniform refinement.
+                    </p>
+                    <img src="img/cfd_flow.png" alt="mesh" style="max-width: 70%" class="project__image">
+                    <img src="img/cfd_flow2.png" alt="mesh" style="max-width: 70%" class="project__image">
+                    <!-- Link to the PDF file -->
+                    <p class="project__description">
+                        <a href="pdf/cfd_proj3.pdf" target="_blank" style="color: purple; text-decoration: underline;">View the Project PDF</a>
+                    </p>
+                </div>
+
+            </div>
+
+
+
+                
+    </main>    
+
+    <footer class="footer">
+        <a
+            href="https://github.com/brownauro2520"
+            class="link footer__link"
+        >
+            Created By Shashwat Patnaik
+        </a>
+        </footer>
+    
+        <div class="scroll-container">
+        <div class="scroll-top">
+        <a aria-label="Scroll up" href="#top">
+            <i aria-hidden="true" class="fas fa-arrow-up"></i>
+        </a>
+        </div>
+        </div>     
+        <script src="./script.js"></script>
+    </body>
+</html>
