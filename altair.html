@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Portfolio" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+
+  <!-- Include Highlight.js library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+
+  <!-- Initialize Highlight.js -->
+  <script>hljs.initHighlightingOnLoad();</script>    
+    <!-- codeeeeee -->
+
+
+    <script
+      src="https://kit.fontawesome.com/fa62c117c7.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <title>Shashwat Patnaik</title>
+  </head>
+  <body class="light" id="top">
+    <header class="header center">
+      <h3>
+        <a href="https://brownauro2520.github.io/shashwatpatnaik.github.io/index.html" class="link"
+          >SP.</a
+        >
+      </h3>
+
+      <nav class="nav center">
+        <ul class="nav__list center">
+          <li class="nav__list-item">
+            <a class="link link--nav" href="index.html#projects">Projects</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="index.html#skills">Skills</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="index.html#contact">Contact</a>
+          </li>
+        </ul>
+
+        <button type="button" aria-label="toggle theme" class="btn btn--icon">
+          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
+
+        <button
+          type="button"
+          aria-label="toggle navigation"
+          class="btn btn--icon nav__hamburger"
+        >
+          <i aria-hidden="true" class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+        <!-- About -->
+        <div class="about center">
+          <h1><span class="about__name">Optimization of Planform Area of Monoblade (6-DOF Simulation)</span></h1>    
+        </div>    
+        
+        
+
+
+        <section id="projects" class="section projects">
+            <p class="project__description">
+                An element-based computational method was employed to optimize the planform of the geometry by maximizing the coefficient of power using MATLAB. While the 6-DOF dynamic model of the pod through SIMULINK was used to reduce the drift in all axis.
+            </p>
+
+            <!-- Add the following image tag -->
+            <img src="img/pod.png" alt="NASA POD" class="project__image">
+            
+            <div class="projects__grid">
+                <div class="projectl">
+                    <h2 id="cansat" class="section__title">CANSAT</h2>
+                    <p class="project__description">
+                        CanSat is a student-oriented engineering competition organized by the American Astronautical Society (AAS), designed to provide participants with hands-on experience in aerospace engineering and space-related projects. In this annual competition, student teams are challenged to design, build, and launch a small satellite, known as a CanSat, that fits within the size constraints of a standard soda can. The CanSat must incorporate various sensors and communication systems to accomplish a specific mission, such as collecting and transmitting data during its descent back to Earth. This annual competition is open to teams from universities and colleges. Teams must be able to design and build a space-type system, following the approved competition guide, and then compete against each at the end of two semesters to determine the winners. Rockets will be provided but teams are responsible for funding the construction of their CanSat and all travel/lodging expenses.
+                    </p>
+                    <img src="img/cansatlogo.png" alt="logo" style="max-width: 30%" class="project__image">
+                </div>
+
+
+                <div class="projectl">
+                    <h2 id="mission" class="section__title">CANSAT 2021-2022 Mission Statement</h2>
+                    <p class="project__description">
+                        <ul class="step-list">
+                            <li>To design a CanSat consisting of a container and two auto-rotating maple seed science payloads. The Cansat will be launched to an altitude ranging 670 meters to 725 meters. CanSat container must hold and protect the science payloads during launch and deployment.</li>
+                            <li>To deploy the parachute of the container and descend at the rate of 15 m/s.</li>
+                            <li>To design a deployment mechanism to release one of the science payload at 500 meters and other at 400 meters.</li>
+                            <li>To design the auto-rotating maple seed which shall descend at a rate less than 20m/s.</li>
+                            <li>To monitor air pressure, air temperature, and rotation rate for the science payload and transmit to data to container.</li>
+                            <li>To monitor and transmit altitude, battery voltage and GPS position for the CanSat Container.</li>
+                        </ul>
+                    </p>
+                    <img src="img/req_cansat.png" alt="blade" style="max-width: 80%" class="project__image">
+                </div>
+
+
+                <div class="projectl">
+                    <h2 id="mission" class="section__title">Optimization of Planform Area of Monoblade (6-DOF Simulation)</h2>
+                    <p class="project__description">
+                        An element-based computational method based on Glauert's blade element momentum theory (BEMT) model was employed to estimate the geometry by maximizing the coefficient of power through MATLAB's optimization toolbox using the Sequential quadratic programming (SQP) solver. The dynamic model was developed for the single-wing design through the MATLAB Simulink 6-DOF toolbox to carry out a free-flight simulation of the wing to verify its global stability.
+                    </p>
+                    <img src="img/blade.png" alt="blade" style="max-width: 40%" class="project__image">
+                    <p class="project__description">The paper published in ASME IMECE2021 Conference, titled <strong>Design Optimization of Monoblade Autorotating Pods to Exhibit an Unconventional Descent Technique Using Glauert's Modeling</strong> details all the technical and theoritacal aspect of the optmization.
+                    </p>
+                    <!-- Link to the PDF file -->
+                    <p class="project__description">
+                        <a href="pdf/Optmization_monoblade.pdf" target="_blank" style="color: purple; text-decoration: underline;">View the paper PDF: Design Optimization of Monoblade Autorotating Pods to Exhibit an Unconventional Descent Technique Using Glauert's Modeling.pdf</a>
+                    </p>
+
+                    <!-- DOI link with styling -->
+                    <p class="project__description">
+                        <a href="https://doi.org/10.1115/IMECE2021-69936" target="_blank" style="color: purple; text-decoration: underline;">DOI: 10.1115/IMECE2021-69936</a>
+                    </p>
+                </div>
+
+
+                <div class="projectl">
+                    <h2 id="mission" class="section__title">CANSAT CDR</h2>
+                    <p class="project__description">
+                        The Critical Design Review (CDR) for the 2021 CanSat encapsulates a comprehensive overview of the project's intricacies and planning. The introduction sets the stage for the document, outlining the purpose and objectives of the CanSat initiative. The system overview delves into the holistic design, elucidating the key components and their intended interactions. The CDR systematically dissects the CanSat's architecture, beginning with the sensor subsystem design, providing insights into the selection and integration of sensors crucial for the mission's success. The descent control system, an essential element, is thoroughly discussed, followed by the mechanical subsystem design, detailing the structural components and their functionalities. The communication and data handling subsystem design elucidates how information is transmitted and processed, ensuring effective data collection. The electrical power subsystem design focuses on the CanSat's energy requirements and power distribution. Flight software design explains the coding and algorithms crucial for mission execution. The ground control system design outlines how the CanSat is controlled and monitored from the ground. The document proceeds to the integration and testing phase, emphasizing the meticulous steps taken to ensure the CanSat's functionality. Mission operations and analysis cover the execution and post-mission assessment. Requirement compliance serves as a critical section, verifying adherence to specified criteria. In essence, this CDR encapsulates the exhaustive planning, design, and testing undertaken for the 2021 CanSat, offering a detailed roadmap of its conception and execution.
+                    </p>
+                    <img src="img/cdr_cansat.png" alt="blade" style="max-width: 60%" class="project__image">
+                    <!-- Link to the PDF file -->
+                    <p class="project__description">
+                        <a href="pdf/Cansat 2021 CDR.pdf" target="_blank" style="color: purple; text-decoration: underline;">View the CDR PDF</a>
+                    </p>
+
+
+            </div>
+    </main>    
+
+    <footer class="footer">
+        <a
+            href="https://github.com/brownauro2520"
+            class="link footer__link"
+        >
+            Created By Shashwat Patnaik
+        </a>
+        </footer>
+    
+        <div class="scroll-container">
+        <div class="scroll-top">
+        <a aria-label="Scroll up" href="#top">
+            <i aria-hidden="true" class="fas fa-arrow-up"></i>
+        </a>
+        </div>
+        </div>     
+        <script src="./script.js"></script>
+    </body>
+</html>
