@@ -125,9 +125,9 @@
           </div>
 
           <div class="project">
-            <h3>CFD (FEM and FVM Higher-Order Solver) & Mesh Adaptation (Adjoint Error Indicators)</h3>
+            <h3>Adjoint Based Mesh Adaptation</h3>
             <p class="project__description">
-              Adjoint-based mesh adaptation strategy for mesh refinement of compressible flow over the multi-element airfoil using SSP-RK2 with local time stepping using Finite Volume Method developed from sctrach.
+              First-order methods such as FVM are heavily dependent on the quality of the underlying computational mesh. Adjoint-based mesh adaptation is a powerful technique for improving the accuracy and efficiency of numerical simulations. By transferring solution states between coarse and fine spaces, problematic regions within the domain are identified. Deciding which cells are to be refined depends on the targeting strategy. The lift, drag, moment and entropy adjoints were used to adapt the mesh and the targeting strategy chosen was to refine 25% of the total error. The rate of convergence varies based on which adjoint is used to drive refinement as well as the specific targeting strategy. If finely tuned, using a statistical quantity such as the mean to target cells would be the most effective. The quality of the solution has improved compared to primitive adaptation methods and uniform refinement.
             </p>
             <ul class="project__stack">
               <li class="project__stack-item">C++</li>
@@ -137,6 +137,88 @@
             
             <!-- Add the following image tag -->
             <img src="img/mesh.png" alt="mesh adaptation" class="project__image">
+            <img src="img/cfd_flow2.png" alt="mesh" style="max-width: 70%" class="project__image">
+            <p class="project__description">
+              <a href="pdf/cfd_proj3.pdf" target="_blank" style="color: purple; text-decoration: underline;">View the Project PDF</a>
+            </p>
+            <a
+              href="https://github.com"
+              aria-label="source code"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
+            <a
+              href="/shashwatpatnaik.github.io/cfd.html"
+              aria-label="live preview"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+
+
+          <div class="project">
+            <h3>Optimization of Planform Area of Monoblade (6-DOF Simulation)</h3>
+            <p class="project__description">
+              An element-based computational method based on Glauert's blade element momentum theory (BEMT) model was employed to estimate the geometry by maximizing the coefficient of power through MATLAB's optimization toolbox using the Sequential quadratic programming (SQP) solver. The dynamic model was developed for the single-wing design through the MATLAB Simulink 6-DOF toolbox to carry out a free-flight simulation of the wing to verify its global stability.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">MATLAB</li>
+              <li class="project__stack-item">6-DOF</li>
+              <li class="project__stack-item">Simulink</li>
+              <li class="project__stack-item">Gradient-Based Optimization</li>
+            </ul>
+            
+            <!-- Add the following image tag -->
+            <img src="img/blade.png" alt="blade" style="max-width: 40%" class="project__image">
+            <p class="project__description">The paper published in ASME IMECE2021 Conference, titled <strong>Design Optimization of Monoblade Autorotating Pods to Exhibit an Unconventional Descent Technique Using Glauert's Modeling</strong> details all the technical and theoritacal aspect of the optmization.
+            </p>
+            <!-- Link to the PDF file -->
+            <p class="project__description">
+                <a href="pdf/Optmization_monoblade.pdf" target="_blank" style="color: purple; text-decoration: underline;">View the paper PDF: Design Optimization of Monoblade Autorotating Pods to Exhibit an Unconventional Descent Technique Using Glauert's Modeling.pdf</a>
+            </p>
+
+            <!-- DOI link with styling -->
+            <p class="project__description">
+                <a href="https://doi.org/10.1115/IMECE2021-69936" target="_blank" style="color: purple; text-decoration: underline;">DOI: 10.1115/IMECE2021-69936</a>
+            </p>
+
+            <a
+              href="https://github.com"
+              aria-label="source code"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
+            <a
+              href="/shashwatpatnaik.github.io/altair.html"
+              aria-label="live preview"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+
+
+
+          <div class="project">
+            <h3>Mesh Generation and Local Refinement</h3>
+            <p class="project__description">
+              The objective of this project is to generate an unstructured triangular mesh for a three-element airfoil. The geometry of the airfoil can be seen in Figure. The origin of the coordinate system will be set at the leading edge of the main element, which has a unit chord, c = 1. The fairfield boundary is a square where (x,y) ∈ [-100,100]². The coarse mesh will consist of around 1500 cells, where there are smaller cells close to the airfoil and larger cells in the fairfield. Uniform refinement will be used to generate meshes with 8k, 32k, and 128k elements. Local refinement will be implemented to improve the resolution in important regions like the leading and trailing edges of the airfoil. Finally, verification will be conducted on all meshes to ensure validity and the meshes will be printed to a .gri file format.                    
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">C++</li>
+              <li class="project__stack-item">Python</li>
+              <li class="project__stack-item">ICEM</li>
+            </ul>
+            
+            <!-- Add the following image tag -->
+            <img src="img/mesh_custom.png" alt="mesh" style="max-width: 50%" class="project__image">
+
+            <p class="project__description">
+              <a href="pdf/cfd_proj1.pdf" target="_blank" style="color: purple; text-decoration: underline;">View the Project PDF</a>
+            </p>
 
             <a
               href="https://github.com"
@@ -154,15 +236,53 @@
             </a>
           </div>
 
+
           <div class="project">
-            <h3>Optimization of Planform Area of Monoblade (6-DOF Simulation)</h3>
+            <h3>Higher-Order Discontinuous Galerkin FVM Solver and Curved Mesh Generation</h3>
             <p class="project__description">
-              An element-based computational method was employed to optimize the planform of the geometry by maximizing the coefficient of power using MATLAB. While the 6-DOF dynamic model of the pod through SIMULINK was used to reduce the drift in all axis.
+              In this project, the Discontinuous Galerkin Method was used along with the implementation of curved meshes, to resolve the flow around an airfoil and a Gaussian bump. The solver had the implementation for p = 0, 1, 2, 3, in order to fulfill the convergence study. It was observed that the rate of convergences is proportional to the order of spatial approximation (p). Further, the capability for mesh adaptation was introduced, and the results after several iterations were compared with data obtained from higher order p and finer mesh.              
             </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">C++</li>
+              <li class="project__stack-item">Python</li>
+              <li class="project__stack-item">ICEM</li>
+            </ul>
+            
+            <!-- Add the following image tag -->
+            <img src="img/dg.png" alt="mesh" style="max-width: 70%" class="project__image">
+
+            <!-- Link to the PDF file -->
+            <p class="project__description">
+                <a href="pdf/cfd_proj2.pdf" target="_blank" style="color: purple; text-decoration: underline;">View the Project PDF</a>
+            </p>
+
+            <a
+              href="https://github.com"
+              aria-label="source code"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
+            <a
+              href="/shashwatpatnaik.github.io/cfd.html"
+              aria-label="live preview"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+
+          
+          <div class="project">
+            <h3>CANSAT 2021-2022</h3>
+            <p class="project__description">
+              The project involves designing a CanSat to carry two auto-rotating maple seed payloads. It will be launched to an altitude of 670-725 meters, deploying a parachute to descend at 15 m/s. The payloads will be released at specific altitudes, descending at less than 20m/s. Various sensors will monitor data transmitted to the CanSat container. I focused on designing the wing for auto-rotation using 6-DOF simulation. Additionally, I contributed to the outer frame design and oversaw the integration process, including developing the deployment mechanism. For more details, see the CanSat Design Review (CDR) document by clinking on the hyperlink.            </p>
             <ul class="project__stack">
               <li class="project__stack-item">MATLAB</li>
               <li class="project__stack-item">6-DOF</li>
               <li class="project__stack-item">Simulink</li>
+              <li class="project__stack-item">3D-Printing</li>
+              <li class="project__stack-item">Deployment Mechanism (Parachutes)</li>
             </ul>
             
             <!-- Add the following image tag -->
