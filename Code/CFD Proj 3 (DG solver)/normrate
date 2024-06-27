@@ -1,0 +1,24 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+exact_cl = -1.91639087
+exact_cd = 0
+l1_norms = abs(np.array([-1.9288588900-exact_cl, -1.9221299800-exact_cl, -1.9219362200-exact_cl, -1.9219325800-exact_cl]))
+#p0cl = [[5-exact_cl,5-exact_cl,5-exact_cl],[0-exact_cl,0-exact_cl,0-exact_cl],[0-exact_cl,0-exact_cl,0-exact_cl],[0-exact_cl,0-exact_cl,0-exact_cl]]
+#print(p0cl[0])
+# Experimental data
+mesh_sizes = np.array([1, 2,3,4])
+#l1_norms = np.array(p0cl[0])
+
+# Calculate the convergence rates
+experimental_rates = np.log(l1_norms[:-1] / l1_norms[1:]) / np.log(mesh_sizes[:-1] / mesh_sizes[1:])
+print(experimental_rates)
+
+# Plot the convergence study
+fig, ax = plt.subplots()
+ax.loglog(mesh_sizes, l1_norms, "o-", label="Experimental")
+ax.set_xlabel("Mesh Size")
+ax.set_ylabel("L1 Norm")
+ax.set_title("Convergence Study")
+ax.legend()
+plt.show()
