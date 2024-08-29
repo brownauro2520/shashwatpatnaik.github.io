@@ -1,1 +1,1 @@
-To run the solver look at .bat files
+To run the solver look at .sh files
