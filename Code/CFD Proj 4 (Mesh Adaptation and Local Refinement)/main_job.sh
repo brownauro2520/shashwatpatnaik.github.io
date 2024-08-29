@@ -22,9 +22,9 @@ n=100
 
 module load python/3.9.12
 
-g++ 1st_order.cpp -o main
-g++ finres.cpp -o finres
-g++ tapenade/adjoint.cpp -o adjoint -I/home/astrob/adolc_base/include -I/home/astrob/eigen -L/home/astrob/adolc_base/lib64 -ladolc
+g++ -O3 1st_order.cpp -o main
+g++ -O3 finres.cpp -o finres
+g++ -O3 tapenade/adjoint.cpp -o adjoint -I/home/astrob/adolc_base/include -I/home/astrob/eigen -L/home/astrob/adolc_base/lib64 -ladolc
 
 # loop n times, passing in a different number parameter each time
 for (( i=0; i<=$n; i++ ))
