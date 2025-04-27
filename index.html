@@ -98,13 +98,52 @@
         <h2 class="section__title">Projects</h2>
 
         <div class="projects__grid">
+
+          <div class="project">
+            <h3>Automated Body-Fitted FFD Generation</h3>
+            <p class="project__description">
+              This project compared standard and body-fitted Free-Form Deformation (FFD) techniques for parameterizing wing geometry in an aerodynamic shape optimization problem. The goal was to minimize drag ($C_D$) subject to a lift constraint ($C_L=0.5$), using ADflow for CFD analysis and IPOPT for optimization. The results evaluate differences in final objective value, convergence speed, and computational cost between the two FFD approaches.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">Python</li>
+              <li class="project__stack-item">IPOPT</li>
+              <li class="project__stack-item">FFD</li>
+              <li class="project__stack-item">Optimization</li>
+            </ul>
+
+            <img src="img/ffd.png" alt="Comparison of Standard vs Body-Fitted FFD" class="project__image">
+
+            <p class="project__description">
+               The body-fitted FFD approach demonstrated superior computational efficiency, achieving a slightly lower drag objective with significantly fewer function evaluations and reduced CPU time compared to the standard FFD method.
+            </p>
+
+            <p class="project__description">
+                <a href="pdf/FFD.pdf" target="_blank" style="color: purple; text-decoration: underline;">View the Project PDF</a>
+            </p>
+
+            <a
+              href="#"
+              aria-label="source code"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
+            <a
+              href="pdf/FFD.pdf"
+              aria-label="live preview"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+          
           <div class="project">
             <h3>Aerodynamic Shape Optimization</h3>
             <p class="project__description">
               UAV companies must design fuselage shapes that are able to enclose odd shapes, be lightweight, and remain within regulations all while minimizing drag. The goal of this project is to propose a framework, methodology, and execution for aerodynamic shape optimization of small unmanned aerial vehicles.
             </p>
             <ul class="project__stack">
-              <li class="project__stack-item">ADFlow</li>
+              <li class="project__stack-item">OpenMDAO</li>
               <li class="project__stack-item">Python</li>
               <li class="project__stack-item">Linux</li>
             </ul>
