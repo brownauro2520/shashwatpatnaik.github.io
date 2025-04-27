@@ -102,7 +102,7 @@
           <div class="project">
             <h3>Automated Body-Fitted FFD Generation</h3>
             <p class="project__description">
-              This project compared standard and body-fitted Free-Form Deformation (FFD) techniques for parameterizing wing geometry in an aerodynamic shape optimization problem. The goal was to minimize drag ($C_D$) subject to a lift constraint ($C_L=0.5$), using ADflow for CFD analysis and IPOPT for optimization. The results evaluate differences in final objective value, convergence speed, and computational cost between the two FFD approaches.
+              This project focused on developing and evaluating a body-fitted Free-Form Deformation (FFD) approach designed for more automated geometry parameterization in aerodynamic optimization. Standard FFD requires careful manual placement of the control point box, whereas the body-fitted method conforms the lattice to the geometry automatically. This approach was tested on a wing drag minimization problem using ADflow and IPOPT to compare its effectiveness against a standard FFD setup. Comparison with the standard FFD showed that the body-fitted method yields a slight improvement in the final drag objective while offering a significant improvement in computational time due to faster convergence.
             </p>
             <ul class="project__stack">
               <li class="project__stack-item">Python</li>
@@ -112,10 +112,6 @@
             </ul>
 
             <img src="img/ffd.png" alt="Comparison of Standard vs Body-Fitted FFD" class="project__image">
-
-            <p class="project__description">
-               The body-fitted FFD approach demonstrated superior computational efficiency, achieving a slightly lower drag objective with significantly fewer function evaluations and reduced CPU time compared to the standard FFD method.
-            </p>
 
             <p class="project__description">
                 <a href="pdf/FFD.pdf" target="_blank" style="color: purple; text-decoration: underline;">View the Project PDF</a>
