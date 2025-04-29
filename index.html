@@ -350,6 +350,46 @@
 
 
           <div class="project">
+            <h3>Eulerian PDF Simulation: Homogeneous Cases and Wall-Flow Challenges</h3>
+            <p class="project__description">
+              Developed and verified an Eulerian Probability Density Function (PDF) solver for turbulence, based on established models. The solver was successfully tested on standard homogeneous flows (isotropic, shear, expansion), reproducing expected trends but highlighting numerical stability limits. Attempts to extend the solver to inhomogeneous wall-bounded channel flow encountered significant divergence issues, primarily related to implementing complex wall boundary conditions and stability of the inhomogeneity terms. This work validated the solver for basic cases and identified key challenges for simulating more complex, wall-bounded turbulent flows using this Eulerian PDF approach.              
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">MATLAB</li>
+              <li class="project__stack-item">Turbulence Modeling</li>
+              <li class="project__stack-item">Eulerian PDF Methods</li>
+              <li class="project__stack-item">Numerical Methods (PDEs)</li>
+              <li class="project__stack-item">Regression Analysis</li>
+              <li class="project__stack-item">Algorithm</li>
+            </ul>
+            
+            <!-- Add the following image tag -->
+            <img src="img/dg.png" alt="mesh" style="max-width: 70%" class="project__image">
+
+            <!-- Link to the PDF file -->
+            <p class="project__description">
+                <a href="pdf/PDF_Eulerian_Method.pdf" target="_blank" style="color: purple; text-decoration: underline;">View the Project PDF</a>
+            </p>
+
+            <a
+              href="https://github.com/brownauro2520/shashwatpatnaik.github.io/tree/main/Code/CFD%20Proj%203%20(DG%20solver)"
+              aria-label="source code"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
+            <a
+              href="/shashwatpatnaik.github.io/cfd.html"
+              aria-label="live preview"
+              class="link link--icon"
+            >
+              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+
+          
+
+          <div class="project">
             <h3>Higher-Order Discontinuous Galerkin FVM Solver and Curved Mesh Generation</h3>
             <p class="project__description">
               In this project, the Discontinuous Galerkin Method was used along with the implementation of curved meshes, to resolve the flow around an airfoil and a Gaussian bump. The solver had the implementation for p = 0, 1, 2, 3, in order to fulfill the convergence study. It was observed that the rate of convergences is proportional to the order of spatial approximation (p). Further, the capability for mesh adaptation was introduced, and the results after several iterations were compared with data obtained from higher order p and finer mesh.              
